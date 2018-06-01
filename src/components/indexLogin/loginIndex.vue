@@ -1,7 +1,7 @@
 <template>
   <div id="login">
     <header class="login-title">
-      <img src="../base/img/LOGO.png"/>
+      <img src="../../base/img/LOGO.png"/>
       <h1>英伟后台管理系统</h1>
     </header>
     <div class="loginIndex">
@@ -43,7 +43,7 @@
 </template>
 <script type="text/ecmascript-6">
   import axios from 'axios'
-  import Modal from '../common/modal/modal'
+  import Modal from '../../common/modal/modal'
 
   export default {
     name: 'login',
@@ -157,11 +157,11 @@
   }
 </script>
 <style scoped lang="less" rel="stylesheet/less">
-  @import "../base/less/base";
+  @import "../../base/less/base";
   #login{
     width: 100%;
     height: 100%;
-    background: url("../base/img/logoin.png");
+    background: url("../../base/img/logoin.png");
     background-size: 100%;
     display: flex;
     align-items: center;
