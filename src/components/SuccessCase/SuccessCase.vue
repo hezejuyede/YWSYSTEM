@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="SuccessCase">
     <HeaderVew></HeaderVew>
     <div class="clearfix center" ref="center">
       <Left :isLeft="isLeft"></Left>
@@ -8,28 +8,36 @@
            v-bind:class="{ 'iconfont icon-liebiao-copy': isLeft,'iconfont icon-liebiao':'!isLeft'}"></i>
         <div class="right-div">
           <div class="right-div-template">
-            <i class="iconfont icon-drxx70"></i>
-            <span>轮播图</span>
+            <i class="iconfont icon-ningxia"></i>
+            <span>华电宁夏灵武</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-yewu"></i>
-            <span>我们的业务</span>
+            <i class="iconfont icon-qinghaisheng"></i>
+            <span>华电青海西宁</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-gongsi"></i>
-            <span>我们的公司</span>
+            <i class="iconfont icon-shandong"></i>
+            <span>华电山东潍坊</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuo"></i>
-            <span>他们选择了我们</span>
+            <i class="iconfont icon-sichuan"></i>
+            <span>华电四川广安</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuoshangicon"></i>
-            <span>硬件合作商</span>
+            <i class="iconfont icon-fujian"></i>
+            <span>福建湄洲湾</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-kaifa"></i>
-            <span>研发软件</span>
+            <i class="iconfont icon-anhui"></i>
+            <span>华电安徽宿州</span>
+          </div>
+          <div class="right-div-template">
+            <i class="iconfont icon-zhangzhou"></i>
+            <span>福建漳州后石</span>
+          </div>
+          <div class="right-div-template">
+            <i class="iconfont icon-guangdong"></i>
+            <span>珠海醋酸纤维</span>
           </div>
         </div>
       </div>
@@ -44,7 +52,7 @@
   import Left from "../../common/left/left";
 
   export default {
-    name: 'index',
+    name: 'SuccessCase',
     data() {
       return {
         isCollapse: true,
@@ -76,12 +84,7 @@
           this.isLeft = true;
           this.isRight = true;
         }
-      },
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
       }
-
-
     },
   }
 </script>
@@ -118,7 +121,7 @@
           float: left;
           margin-left: 3%;
           margin-bottom: 50px;
-          width: 30%;
+          width: 22%;
           height: 200px;
           background-color: @color-white;
           display: flex;
@@ -131,30 +134,38 @@
             color: @color-dialog-background;
             font-size: 16px;
           }
-          .icon-drxx70 {
-            font-size: 40px;
+          .icon-ningxia {
+            font-size: 34px;
             color: #3EC455;
 
           }
-          .icon-yewu {
-            font-size: 40px;
+          .icon-qinghaisheng {
+            font-size: 34px;
             color: #ffcd32;
           }
-          .icon-gongsi {
-            font-size: 40px;
+          .icon-shandong {
+            font-size: 34px;
             color: darkturquoise;
           }
-          .icon-hezuo {
-            font-size: 40px;
+          .icon-fujian {
+            font-size: 34px;
             color: purple;
           }
-          .icon-hezuoshangicon {
-            font-size: 40px;
+          .icon-guangdong {
+            font-size: 34px;
             color: lightpink;
           }
-          .icon-kaifa {
-            font-size: 40px;
+          .icon-zhangzhou {
+            font-size: 34px;
             color: fuchsia;
+          }
+          .icon-anhui {
+            font-size: 34px;
+            color: peachpuff;
+          }
+          .icon-sichuan {
+            font-size: 34px;
+            color: firebrick;
           }
 
         }
@@ -175,15 +186,16 @@
     transition: all 2s;
   }
 
-  @media only screen and (max-width: 500px) {
-    #index {
+  @media only screen and (max-width: 520px) {
+    #SuccessCase {
       .right-div-template {
         width: 95%;
-        height: 70px;
+        height: 53px;
         margin-bottom: 3px;
         span {
           margin-bottom: 0;
           font-size: 12px;
+          margin-top: 1px;
         }
 
       }

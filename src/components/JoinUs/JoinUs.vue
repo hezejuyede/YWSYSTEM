@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="JoinUs">
     <HeaderVew></HeaderVew>
     <div class="clearfix center" ref="center">
       <Left :isLeft="isLeft"></Left>
@@ -8,28 +8,12 @@
            v-bind:class="{ 'iconfont icon-liebiao-copy': isLeft,'iconfont icon-liebiao':'!isLeft'}"></i>
         <div class="right-div">
           <div class="right-div-template">
-            <i class="iconfont icon-drxx70"></i>
-            <span>轮播图</span>
+            <i class="iconfont icon-xiaoyuanzhaopin"></i>
+            <span>校园招聘</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-yewu"></i>
-            <span>我们的业务</span>
-          </div>
-          <div class="right-div-template">
-            <i class="iconfont icon-gongsi"></i>
-            <span>我们的公司</span>
-          </div>
-          <div class="right-div-template">
-            <i class="iconfont icon-hezuo"></i>
-            <span>他们选择了我们</span>
-          </div>
-          <div class="right-div-template">
-            <i class="iconfont icon-hezuoshangicon"></i>
-            <span>硬件合作商</span>
-          </div>
-          <div class="right-div-template">
-            <i class="iconfont icon-kaifa"></i>
-            <span>研发软件</span>
+            <i class="iconfont icon-zhaopin"></i>
+            <span>社会招聘</span>
           </div>
         </div>
       </div>
@@ -118,8 +102,8 @@
           float: left;
           margin-left: 3%;
           margin-bottom: 50px;
-          width: 30%;
-          height: 200px;
+          width: 45%;
+          height: 400px;
           background-color: @color-white;
           display: flex;
           align-items: center;
@@ -131,30 +115,14 @@
             color: @color-dialog-background;
             font-size: 16px;
           }
-          .icon-drxx70 {
+          .icon-xiaoyuanzhaopin {
             font-size: 40px;
             color: #3EC455;
 
           }
-          .icon-yewu {
+          .icon-zhaopin {
             font-size: 40px;
             color: #ffcd32;
-          }
-          .icon-gongsi {
-            font-size: 40px;
-            color: darkturquoise;
-          }
-          .icon-hezuo {
-            font-size: 40px;
-            color: purple;
-          }
-          .icon-hezuoshangicon {
-            font-size: 40px;
-            color: lightpink;
-          }
-          .icon-kaifa {
-            font-size: 40px;
-            color: fuchsia;
           }
 
         }
@@ -176,11 +144,11 @@
   }
 
   @media only screen and (max-width: 500px) {
-    #index {
+    #JoinUs {
       .right-div-template {
         width: 95%;
-        height: 70px;
-        margin-bottom: 3px;
+        height: 200px;
+        margin-bottom: 10px;
         span {
           margin-bottom: 0;
           font-size: 12px;

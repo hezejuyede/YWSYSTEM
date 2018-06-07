@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="knowledge">
     <HeaderVew></HeaderVew>
     <div class="clearfix center" ref="center">
       <Left :isLeft="isLeft"></Left>
@@ -8,28 +8,36 @@
            v-bind:class="{ 'iconfont icon-liebiao-copy': isLeft,'iconfont icon-liebiao':'!isLeft'}"></i>
         <div class="right-div">
           <div class="right-div-template">
-            <i class="iconfont icon-drxx70"></i>
-            <span>轮播图</span>
+            <i class="iconfont icon-ziyuanguanlixitong"></i>
+            <span>报表管理</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-yewu"></i>
-            <span>我们的业务</span>
+            <i class="iconfont icon-shujufabuxitong"></i>
+            <span>WEB发布</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-gongsi"></i>
-            <span>我们的公司</span>
+            <i class="iconfont icon-acquisitionModality"></i>
+            <span>数据采集接口</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuo"></i>
-            <span>他们选择了我们</span>
+            <i class="iconfont icon-icon-test"></i>
+            <span>串口数据传输</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuoshangicon"></i>
-            <span>硬件合作商</span>
+            <i class="iconfont icon-dianliangtongji"></i>
+            <span>电量采集接口</span>
+          </div>
+          <div class="right-div-template">
+            <i class="iconfont icon-xingzhuang"></i>
+            <span>大屏数据传输</span>
+          </div>
+          <div class="right-div-template">
+            <i class="iconfont icon-kaohe"></i>
+            <span>绩效考核系统</span>
           </div>
           <div class="right-div-template">
             <i class="iconfont icon-kaifa"></i>
-            <span>研发软件</span>
+            <span>数据安全传输</span>
           </div>
         </div>
       </div>
@@ -44,7 +52,7 @@
   import Left from "../../common/left/left";
 
   export default {
-    name: 'index',
+    name: 'knowledge',
     data() {
       return {
         isCollapse: true,
@@ -76,9 +84,6 @@
           this.isLeft = true;
           this.isRight = true;
         }
-      },
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
       }
 
 
@@ -118,7 +123,7 @@
           float: left;
           margin-left: 3%;
           margin-bottom: 50px;
-          width: 30%;
+          width: 22%;
           height: 200px;
           background-color: @color-white;
           display: flex;
@@ -131,30 +136,38 @@
             color: @color-dialog-background;
             font-size: 16px;
           }
-          .icon-drxx70 {
-            font-size: 40px;
+          .icon-ziyuanguanlixitong {
+            font-size: 34px;
             color: #3EC455;
 
           }
-          .icon-yewu {
-            font-size: 40px;
+          .icon-shujufabuxitong {
+            font-size: 34px;
             color: #ffcd32;
           }
-          .icon-gongsi {
-            font-size: 40px;
+          .icon-acquisitionModality {
+            font-size: 34px;
             color: darkturquoise;
           }
-          .icon-hezuo {
-            font-size: 40px;
+          .icon-dianliangtongji {
+            font-size: 34px;
             color: purple;
           }
-          .icon-hezuoshangicon {
-            font-size: 40px;
+          .icon-xingzhuang {
+            font-size: 34px;
             color: lightpink;
           }
           .icon-kaifa {
-            font-size: 40px;
+            font-size: 34px;
             color: fuchsia;
+          }
+          .icon-icon-test {
+            font-size: 34px;
+            color: peachpuff;
+          }
+          .icon-kaohe {
+            font-size: 34px;
+            color: firebrick;
           }
 
         }
@@ -175,20 +188,19 @@
     transition: all 2s;
   }
 
-  @media only screen and (max-width: 500px) {
-    #index {
+  @media only screen and (max-width: 520px) {
+    #knowledge {
       .right-div-template {
         width: 95%;
-        height: 70px;
+        height: 53px;
         margin-bottom: 3px;
         span {
           margin-bottom: 0;
           font-size: 12px;
+          margin-top: 1px;
         }
 
       }
     }
   }
-
-
 </style>

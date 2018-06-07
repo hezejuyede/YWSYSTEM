@@ -47,16 +47,16 @@
 
   export default {
     name: 'login',
-    data(){
+    data() {
       return {
         username: '',
         password: '',
-        userNameErrText:'',
-        passwordErrText:'',
-        userNameState:false,
-        passwordState:false,
-        message:'',
-        HideModal:true
+        userNameErrText: '',
+        passwordErrText: '',
+        userNameState: false,
+        passwordState: false,
+        message: '',
+        HideModal: true
       }
     },
     components: {Modal},
@@ -107,34 +107,40 @@
                   "username": this.username,
                 });
                 const that = this;
+
                 function a() {
                   that.message = "";
                   that.HideModal = true;
                   that.$router.push({path: "/"})
                 }
+
                 setTimeout(a, 2000);
               }
               else if (res.data === "2") {
                 this.message = "该用户没有注册";
                 this.HideModal = false;
                 const that = this;
+
                 function b() {
                   that.message = "";
                   that.HideModal = true;
                   that.username = '';
                   that.password = '';
                 }
+
                 setTimeout(b, 2000);
               }
               else if (res.data === "-1") {
                 this.message = "密码错误";
                 this.HideModal = false;
                 const that = this;
+
                 function c() {
                   that.message = "";
                   that.HideModal = true;
                   that.password = '';
                 }
+
                 setTimeout(c, 2000);
               }
             })
@@ -146,10 +152,12 @@
           this.message = "请正确填写信息";
           this.HideModal = false;
           const that = this;
+
           function a() {
             that.message = "";
             that.HideModal = true;
           }
+
           setTimeout(a, 2000);
         }
       },
@@ -158,7 +166,8 @@
 </script>
 <style scoped lang="less" rel="stylesheet/less">
   @import "../../base/less/base";
-  #login{
+
+  #login {
     width: 100%;
     height: 100%;
     background: url("../../base/img/logoin.png");
@@ -167,30 +176,30 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    header{
+    header {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 50px;
       margin-top: -50px;
-      img{
+      img {
         height: 50px;
       }
-      h1{
+      h1 {
         font-size: 30px;
       }
 
     }
-    .loginIndex{
+    .loginIndex {
       width: 400px;
       height: 250px;
       border-radius: 5%;
-      background-color: rgba(184,202,219,0.6);
+      background-color: rgba(184, 202, 219, 0.6);
       position: relative;
-      .loginIndex-top{
+      .loginIndex-top {
         width: 50px;
         height: 50px;
-        background-color: rgba(19,179,210,1);
+        background-color: rgba(19, 179, 210, 1);
         border-radius: 40%;
         display: flex;
         align-items: center;
@@ -199,15 +208,14 @@
         position: absolute;
         top: -25px;
         left: 45%;
-        .icon-mima{
+        .icon-mima {
           font-size: @font-size-large-xx;
         }
 
-
       }
-      .loginIndex-username{
+      .loginIndex-username {
         width: 90%;
-        margin: 40px auto  0 auto;
+        margin: 40px auto 0 auto;
         height: 50px;
         background-color: @color-white;
         display: flex;
@@ -216,14 +224,14 @@
         border-radius: 5%;
         font-size: @font-size-medium-x;
         position: relative;
-        input{
+        input {
           width: 80%;
           height: 50px;
           padding-left: 20px;
           background-color: @color-white;
         }
       }
-      .loginIndex-password{
+      .loginIndex-password {
         width: 90%;
         margin: 25px auto;
         height: 50px;
@@ -233,7 +241,7 @@
         justify-content: center;
         border-radius: 5%;
         position: relative;
-        input{
+        input {
           width: 80%;
           height: 50px;
           padding-left: 20px;
@@ -241,15 +249,15 @@
           background-color: @color-white;
         }
       }
-      .loginIndex-login{
+      .loginIndex-login {
         width: 90%;
-        margin:0 auto;
+        margin: 0 auto;
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
-        button{
-          background-color: rgba(19,179,210,1);
+        button {
+          background-color: rgba(19, 179, 210, 1);
           border: 0;
           width: 100%;
           height: 50px;
@@ -257,11 +265,12 @@
           font-size: @font-size-large;
           border-radius: 5%;
 
-        };
+        }
+      ;
       }
-      .userErrText{
+      .userErrText {
         position: absolute;
-        bottom:-22px;
+        bottom: -22px;
         left: 0;
         width: 100%;
         height: 20px;
@@ -269,9 +278,9 @@
         line-height: 20px;
         padding-left: 20px;
       }
-      .passwordText{
+      .passwordText {
         position: absolute;
-        bottom:-22px;
+        bottom: -22px;
         left: 0;
         width: 100%;
         height: 20px;
@@ -280,22 +289,21 @@
         padding-left: 20px;
       }
     }
-    footer{
+    footer {
       margin-top: 50px;
       font-size: @font-size-medium-x;
     }
   }
-  @media only screen and (max-width:400px){
-    #login{
-      .loginIndex{
+
+  @media only screen and (max-width: 400px) {
+    #login {
+      .loginIndex {
         width: 300px;
-        .loginIndex-top{
+        .loginIndex-top {
           left: 42%;
         }
       }
     }
-
-
 
   }
 

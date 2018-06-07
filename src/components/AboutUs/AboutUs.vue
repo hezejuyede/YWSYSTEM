@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="AboutUs">
     <HeaderVew></HeaderVew>
     <div class="clearfix center" ref="center">
       <Left :isLeft="isLeft"></Left>
@@ -8,28 +8,24 @@
            v-bind:class="{ 'iconfont icon-liebiao-copy': isLeft,'iconfont icon-liebiao':'!isLeft'}"></i>
         <div class="right-div">
           <div class="right-div-template">
-            <i class="iconfont icon-drxx70"></i>
-            <span>轮播图</span>
+            <i class="iconfont icon-48copy25"></i>
+            <span>公司简介</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-yewu"></i>
-            <span>我们的业务</span>
+            <i class="iconfont icon-guanyuwomen"></i>
+            <span>关于我们</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-gongsi"></i>
-            <span>我们的公司</span>
+            <i class="iconfont icon-qiyewenhua"></i>
+            <span>企业文化</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuo"></i>
-            <span>他们选择了我们</span>
+            <i class="iconfont icon-hezuoshang01"></i>
+            <span>合作伙伴</span>
           </div>
           <div class="right-div-template">
-            <i class="iconfont icon-hezuoshangicon"></i>
-            <span>硬件合作商</span>
-          </div>
-          <div class="right-div-template">
-            <i class="iconfont icon-kaifa"></i>
-            <span>研发软件</span>
+            <i class="iconfont icon-lianxiwomen"></i>
+            <span>联系我们</span>
           </div>
         </div>
       </div>
@@ -77,9 +73,6 @@
           this.isRight = true;
         }
       },
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      }
 
 
     },
@@ -131,32 +124,27 @@
             color: @color-dialog-background;
             font-size: 16px;
           }
-          .icon-drxx70 {
+          .icon-48copy25 {
             font-size: 40px;
             color: #3EC455;
 
           }
-          .icon-yewu {
+          .icon-guanyuwomen {
             font-size: 40px;
             color: #ffcd32;
           }
-          .icon-gongsi {
+          .icon-qiyewenhua {
             font-size: 40px;
             color: darkturquoise;
           }
-          .icon-hezuo {
+          .icon-hezuoshang01 {
             font-size: 40px;
             color: purple;
           }
-          .icon-hezuoshangicon {
+          .icon-lianxiwomen {
             font-size: 40px;
             color: lightpink;
           }
-          .icon-kaifa {
-            font-size: 40px;
-            color: fuchsia;
-          }
-
         }
 
       }
@@ -176,10 +164,10 @@
   }
 
   @media only screen and (max-width: 500px) {
-    #index {
+    #AboutUs {
       .right-div-template {
         width: 95%;
-        height: 70px;
+        height: 80px;
         margin-bottom: 3px;
         span {
           margin-bottom: 0;
